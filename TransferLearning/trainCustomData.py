@@ -25,7 +25,7 @@ transform = transforms.Compose([
 
 dataset = CatsAndDogsDataset(csv_file='cats_dogs.csv', root_dir='cats_dogs', transform=transform)
 
-train_set, test_set = torch.utils.data.random_split(dataset, [20000, 5000])
+train_set, test_set = torch.utils.data.random_split(dataset, [3, 2])
 train_loader = DataLoader(dataset=train_set, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(dataset=test_set, batch_size=batch_size, shuffle=True)
 
